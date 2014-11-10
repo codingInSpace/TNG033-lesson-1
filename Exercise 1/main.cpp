@@ -28,15 +28,36 @@ void set(Vector &V, int i);
 //Display Vector V to stream out
 ostream& operator<<(ostream& out, const Vector &V);
 
-
 //Read a Vector V from stream in
 istream& operator>>(istream& in, Vector &V);
 
-int main(){
+//Calculate and return length of vector
+double length(const Vector &V);
 
+
+/*******MAIN*********/
+
+int main(){
+	Vector V;
+	int cols = 0;
+	create_vector(V, cols);
+
+	cout << "\nNumber of coordinates?";
+	cin >> cols;
+
+	set(V, cols);
+
+	cout << "\nEnter coordinates: ";
+	cin >> V;
+
+	cout << "\nVector: ";
+	cout << V;
 
 	return 0;
 }
+
+/********************/
+
 
 void create_vector(Vector &V, int n){
 
@@ -67,8 +88,18 @@ void empty_vector(Vector &V){
     V.p = nullptr;
 }
 
-//Return value stored in line i and column j of M, i.e. M[i,j]
-//Assume M is not empty
+//Assuming V not empty, return number of columns
 int get(const Vector &V){
     return V.cols;
+}
+
+//Store value v in line i and column j of M, i.e. M[i,j] = v
+void set(Vector &V, int n){
+    V.cols = n;
+}
+
+//Calculate and return length of vector
+double length(const Vector &V){
+	return 0.0;
+
 }
