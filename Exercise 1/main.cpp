@@ -20,7 +20,7 @@ void create_vector(Vector &V, int n = 0);
 void empty_vector(Vector &V);
 
 //Assuming V not empty, return number of columns
-int get(const Vector &V, int i);
+int get(const Vector &V);
 
 //Set number of columns
 void set(Vector &V, int i);
@@ -55,4 +55,20 @@ void create_vector(Vector &V, int n){
 		V.cols = 0;
 
 	cout << "Vector created.\n";
+}
+
+//Deallocate space occupied by Vector
+//V = empty vector
+void empty_vector(Vector &V){
+    V.cols = 0;
+
+    delete [] V.p; //deallocate memory
+
+    V.p = nullptr;
+}
+
+//Return value stored in line i and column j of M, i.e. M[i,j]
+//Assume M is not empty
+int get(const Vector &V){
+    return V.cols;
 }
