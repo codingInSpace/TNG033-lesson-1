@@ -19,11 +19,11 @@ void create_vector(Vector &V, int n = 0);
 //V = empty vector
 void empty_vector(Vector &V);
 
-//Assuming V not empty, return number of columns
-int get(const Vector &V);
+//Assuming V not empty, return value stored in column col
+int get(const Vector &V, int col);
 
-//Set number of columns
-void set(Vector &V, int i);
+//Store value d in comumn col
+void set(Vector &V, int col, double d);
 
 //Display Vector V to stream out
 ostream& operator<<(ostream& out, const Vector &V);
@@ -88,18 +88,51 @@ void empty_vector(Vector &V){
     V.p = nullptr;
 }
 
-//Assuming V not empty, return number of columns
-int get(const Vector &V){
-    return V.cols;
+//Assuming V not empty, return value stored in column col
+int get(const Vector &V, int col){
+    return V.p[col];
 }
 
-//Store value v in line i and column j of M, i.e. M[i,j] = v
-void set(Vector &V, int n){
-    V.cols = n;
+//Store value d in comumn col
+void set(Vector &V, int col, double d){
+    V.p[col] = d;
 }
+
 
 //Calculate and return length of vector
 double length(const Vector &V){
 	return 0.0;
 
+}
+
+//Display Matrix A to stream out
+ostream& operator<<(ostream& out, const Vector &V)
+{
+    cout << "(<-" << endl;
+
+    for(int i = 0; i < V.cols; i++){
+    	out << setw(8) << fixed << setprecision(2)
+    		<< get()
+    }
+    
+
+    cout << "->)" << endl;
+
+    return out;
+}
+
+
+//Read a Matrix from stream in
+istream& operator>>(istream& in, Matrix& A)
+{
+    for(int i = 0; i < A.lines; i++)
+        for(int j = 0; j < A.cols; j++)
+        {
+            //in >> val;
+            //set(A,i,j,val);
+
+            in >>  A.p_table[i*A.cols+j];
+        }
+
+    return in;
 }
