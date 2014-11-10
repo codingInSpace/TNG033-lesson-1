@@ -105,14 +105,13 @@ double length(const Vector &V){
 
 }
 
-//Display Matrix A to stream out
-ostream& operator<<(ostream& out, const Vector &V)
-{
+//Display Vector V to stream out
+ostream& operator<<(ostream& out, const Vector &V){
     cout << "(<-" << endl;
 
     for(int i = 0; i < V.cols; i++){
     	out << setw(8) << fixed << setprecision(2)
-    		<< get()
+    		<< get(V,i) << " ";
     }
     
 
@@ -122,17 +121,11 @@ ostream& operator<<(ostream& out, const Vector &V)
 }
 
 
-//Read a Matrix from stream in
-istream& operator>>(istream& in, Matrix& A)
-{
-    for(int i = 0; i < A.lines; i++)
-        for(int j = 0; j < A.cols; j++)
-        {
-            //in >> val;
-            //set(A,i,j,val);
-
-            in >>  A.p_table[i*A.cols+j];
-        }
-
+//Read Vector V from stream in
+istream& operator>>(istream& in, Matrix& A){
+    for(int i = 0; i < V.cols; i++)
+		in >> V.p[i];
+	
     return in;
+ 
 }
