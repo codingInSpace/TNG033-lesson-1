@@ -40,18 +40,30 @@ double length(const Vector &V);
 int main(){
 	Vector V;
 	int cols = 0;
-	create_vector(V, cols);
+	
+	char answer;
 
-	cout << "\nNumber of coordinates?";
-	cin >> cols;
+	while(true){
 
-	set(V, cols);
+		cout << "\nNumber of coordinates?";
+		cin >> cols;
 
-	cout << "\nEnter coordinates: ";
-	cin >> V;
+		create_vector(V, cols);
 
-	cout << "\nVector: ";
-	cout << V;
+		cout << "\nEnter coordinates: ";
+		cin >> V;
+
+		cout << "\nVector: ";
+		cout << V;
+
+		cout << "\nContinue? (y/n): ";
+		cin >> answer;
+
+		if(answer == 'n'){
+			empty_vector(V);	//deallocate memory
+			break;				//exit loop
+		}
+	}
 
 	return 0;
 }
@@ -122,10 +134,9 @@ ostream& operator<<(ostream& out, const Vector &V){
 
 
 //Read Vector V from stream in
-istream& operator>>(istream& in, Matrix& A){
+istream& operator>>(istream& in, Vector &V){
     for(int i = 0; i < V.cols; i++)
 		in >> V.p[i];
 	
     return in;
- 
 }
