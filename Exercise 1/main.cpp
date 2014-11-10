@@ -8,7 +8,7 @@ using namespace std;
 
 struct Vector{
 	int cols;		//number of coordinates, cols
-	int *p;		//pointer to vector
+	double *p;		//pointer to vector
 };
 
 //Create a vector with n columns
@@ -60,9 +60,10 @@ int main(){
 		cin >> answer;
 
 		if(answer == 'n'){
-			empty_vector(V);	//deallocate memory
 			break;				//exit loop
 		}
+		
+		empty_vector(V);	//deallocate memory
 	}
 
 	return 0;
@@ -79,10 +80,10 @@ void create_vector(Vector &V, int n){
 		V.p = nullptr;
 		return;
 	}
-	//else?
-
-	V.cols = n;						//set columns
-	V.p = new (nothrow) int [n];	//Allocate memory, return nullptr if unsuccessful
+	else{
+		V.cols = n;						//set columns
+		V.p = new (nothrow) double [n];	//Allocate memory, return nullptr if unsuccessful
+	}
 
 	if(!V.p)	//if not possible
 		V.cols = 0;
@@ -119,10 +120,10 @@ double length(const Vector &V){
 
 //Display Vector V to stream out
 ostream& operator<<(ostream& out, const Vector &V){
-    cout << "(<-" << endl;
+    cout << "(<-";
 
     for(int i = 0; i < V.cols; i++){
-    	out << setw(8) << fixed << setprecision(2)
+    	out << setw(4) << fixed << setprecision(2)
     		<< get(V,i) << " ";
     }
     
