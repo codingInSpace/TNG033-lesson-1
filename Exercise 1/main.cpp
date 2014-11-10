@@ -7,7 +7,7 @@
 using namespace std;
 
 struct Vector{
-	int n;		//number of coordinates, cols
+	int cols;		//number of coordinates, cols
 	int *p;		//pointer to vector
 };
 
@@ -36,4 +36,23 @@ int main(){
 
 
 	return 0;
+}
+
+void create_vector(Vector &V, int n){
+
+	//create empty vector
+	if(!n){
+		V.cols = 0;
+		V.p = nullptr;
+		return;
+	}
+	//else?
+
+	V.cols = n;						//set columns
+	V.p = new (nothrow) int [n];	//Allocate memory, return nullptr if unsuccessful
+
+	if(!V.p)	//if not possible
+		V.cols = 0;
+
+	cout << "Vector created.\n";
 }
