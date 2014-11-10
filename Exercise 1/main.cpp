@@ -3,6 +3,7 @@
 #include <string>
 #include <iomanip>
 #include <fstream>
+#include <math.h>
 
 using namespace std;
 
@@ -20,7 +21,7 @@ void create_vector(Vector &V, int n = 0);
 void empty_vector(Vector &V);
 
 //Assuming V not empty, return value stored in column col
-int get(const Vector &V, int col);
+double get(const Vector &V, int col);
 
 //Store value d in comumn col
 void set(Vector &V, int col, double d);
@@ -56,14 +57,15 @@ int main(){
 		cout << "\nVector: ";
 		cout << V;
 
+		cout << "\nLength: " << length(V);
+
 		cout << "\nContinue? (y/n): ";
 		cin >> answer;
 
-		if(answer == 'n'){
-			break;				//exit loop
-		}
+		if(answer == 'n')
+			break;			//exit loop
 		
-		empty_vector(V);	//deallocate memory
+		empty_vector(V);	//deallocate memory every iteration
 	}
 
 	return 0;
@@ -102,7 +104,7 @@ void empty_vector(Vector &V){
 }
 
 //Assuming V not empty, return value stored in column col
-int get(const Vector &V, int col){
+double get(const Vector &V, int col){
     return V.p[col];
 }
 
@@ -114,21 +116,29 @@ void set(Vector &V, int col, double d){
 
 //Calculate and return length of vector
 double length(const Vector &V){
-	return 0.0;
+	double l = 0.0;
+
+	for (int i = 0; i < V.cols; ++i){
+		l += pow(V.p[i], 2);	//other way around?
+	}
+
+	length = sqrt(l);
+
+	return length;
 
 }
 
 //Display Vector V to stream out
 ostream& operator<<(ostream& out, const Vector &V){
-    cout << "(<-";
-
+    cout << "(<";
+111
     for(int i = 0; i < V.cols; i++){
-    	out << setw(4) << fixed << setprecision(2)
+    	out << setw(5) << fixed << setprecision(2)
     		<< get(V,i) << " ";
     }
     
 
-    cout << "->)" << endl;
+    cout << ">)" << endl;
 
     return out;
 }
