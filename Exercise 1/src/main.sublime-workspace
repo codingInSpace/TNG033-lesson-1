@@ -1,0 +1,233 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"i",
+				"i"
+			],
+			[
+				"cols",
+				"cols"
+			],
+			[
+				"d",
+				"do	Do While Loop"
+			],
+			[
+				"V",
+				"V"
+			],
+			[
+				"create",
+				"create_vector"
+			],
+			[
+				"p",
+				"p"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 372.0,
+		"selected_items":
+		[
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 200.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jonathan/Code/TNG033-lesson-1/Exercise 1/main.cpp",
+		"/home/jonathan/Downloads/Code4/Matrices/matrices.cpp",
+		"/home/jonathan/Downloads/Code4/mem_alloc.cpp",
+		"/home/jonathan/.config/sublime-text-3/Packages/User/c++11-binpath.sublime-build",
+		"/home/jonathan/Downloads/Code3/pointers0.cpp",
+		"/home/jonathan/Downloads/Code3/pointers1.cpp",
+		"/home/jonathan/Downloads/Code3/pointers2.cpp",
+		"/home/jonathan/.config/sublime-text-3/Packages/User/c++11test.sublime-build",
+		"/var/www/html/Portalen/database/portalen.sql",
+		"/var/www/html/Portalen/php/DBConnect.php",
+		"/home/jonathan/Eclipse/android-studio/Install-Linux-tar.txt",
+		"/home/jonathan/Eclipse/android-studio/build.txt",
+		"/home/jonathan/Downloads/Code1/streamStrings_1.cpp",
+		"/etc/yum.repos.d/home:satya164:elegance-colors.repo",
+		"/home/jonathan/Downloads/Code1/sum - file.cpp",
+		"/home/jonathan/Eclipse/adt-bundle-linux-x86_64-20140702/eclipse/eclipse.ini",
+		"/home/jonathan/.cache/.fr-2SMJ9C/README",
+		"/home/jonathan/.cache/.fr-dmDtYH/COPYING",
+		"/home/jonathan/.cache/.fr-APvn5S/INSTALL",
+		"/home/jonathan/.cache/.fr-ESd4B8/INSTALL",
+		"/home/jonathan/.cache/.fr-RXmQ4v/INSTALL",
+		"/home/jonathan/Code/testProject2/src/test.cpp",
+		"/home/jonathan/Code/testProject2/testProject2.sublime-project",
+		"/home/jonathan/Code/testProject2/bin/test",
+		"/home/jonathan/Code/testProject2/src/test",
+		"/home/jonathan/Code/testProject/src/test1.cpp",
+		"/home/jonathan/Programming/test.cpp",
+		"/var/www/html/Portalen/pages/signUp.php",
+		"/var/www/html/Portalen/pages/apply.php",
+		"/var/www/html/Portalen/apply.php",
+		"/var/www/html/index.php",
+		"/usr/share/applications/eclipse.desktop",
+		"/var/www/html/TestSQL/test.php",
+		"/var/www/html/Portalen/index.php",
+		"/var/www/html/Portalen/php/DBQuery.php",
+		"/var/www/html/Portalen/php/general.php",
+		"/var/www/html/Portalen/login.php",
+		"/var/www/html/Portalen/php/pageManager.php",
+		"/var/www/html/Portalen/php/pages/editProfile.php",
+		"/etc/httpd/conf/httpd.conf",
+		"/opt/sublime_text/changelog.txt"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "main.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 185.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
