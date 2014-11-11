@@ -1,12 +1,11 @@
 #include <iostream>
 #include <sstream>
-#include <string>
 #include <iomanip>
-#include <fstream>
 #include <math.h>
 
-#include "exercise.h"
-#include <new>
+#include "../header/exercise1.h"
+//#include "exercise1.cpp"
+//#include <new>
 
 using namespace std;
 
@@ -18,7 +17,7 @@ int main(){
 
 	while(true){
 
-		cout << "\nNumber of coordinates?";
+		cout << "\nNumber of coordinates: ";
 		cin >> cols;
 
 		create_vector(V, cols);
@@ -26,10 +25,7 @@ int main(){
 		cout << "\nEnter coordinates: ";
 		cin >> V;
 
-		cout << "\nVector: ";
-		cout << V;
-
-		cout << "\nLength: " << length(V);
+		cout << "\nLength of " << V << ": " << length(V);
 
 		cout << "\nContinue? (y/n): ";
 		cin >> answer;

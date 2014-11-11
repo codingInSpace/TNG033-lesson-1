@@ -1,3 +1,7 @@
+#include "../header/exercise1.h"
+#include <new>
+#include <math.h>
+
 void create_vector(Vector &V, int n){
 
 	//create empty vector
@@ -40,29 +44,30 @@ void set(Vector &V, int col, double d){
 
 //Calculate and return length of vector
 double length(const Vector &V){
-	double l = 0.0;
+	double lInitial = 0.0;
+	double lFinal = 0.0;
 
 	for (int i = 0; i < V.cols; ++i){
-		l += pow(V.p[i], 2);	//other way around?
+		lInitial += pow(V.p[i], 2);	//other way around?
 	}
 
-	length = sqrt(l);
+	lFinal = sqrt(lInitial);
 
-	return length;
+	return lFinal;
 
 }
 
 //Display Vector V to stream out
 ostream& operator<<(ostream& out, const Vector &V){
     cout << "(<";
-111
+
     for(int i = 0; i < V.cols; i++){
     	out << setw(5) << fixed << setprecision(2)
     		<< get(V,i) << " ";
     }
     
 
-    cout << ">)" << endl;
+    cout << ">)";
 
     return out;
 }

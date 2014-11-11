@@ -1,5 +1,5 @@
-#ifndef MATRICES_H_INCLUDED
-#define MATRICES_H_INCLUDED
+#ifndef EXERCISE1_H_INCLUDED
+#define EXERCISE1_H_INCLUDED
 
 #include <iostream>
 #include <sstream>
@@ -7,6 +7,8 @@
 #include <iomanip>
 #include <fstream>
 #include <math.h>
+
+//#include "../src/exercise1.cpp"
 
 using namespace std;
 
@@ -37,3 +39,5 @@ istream& operator>>(istream& in, Vector &V);
 
 //Calculate and return length of vector
 double length(const Vector &V);
+
+#endif // EXERCISE1_H_INCLUDED
