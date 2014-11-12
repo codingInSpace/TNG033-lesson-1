@@ -131,15 +131,21 @@ void insert_last(List& L, int n){
 //After insertion L should remain sorted
 void insert_sorted(List& L, int n){
     //insert as first node of the list
-    if (???){
-        //add code
+    if (L == nullptr){
+        //create new node
+        Node* newNode = new Node;
+        newNode->vaue = n;
+
+        newNode = nullptr;
+        L = newNode;
     }
 
     else{
         Node* p = L;    //list not empty
 
         //1. find the node after which insertion should occur
-        //add code
+        while(p->next != nullptr && p->next->value < n)
+            p = p->next;
 
         //2.insert new node after node pointed by p
         //add code
