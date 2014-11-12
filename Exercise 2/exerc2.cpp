@@ -107,10 +107,39 @@ void display_seq(int *V, int n)
 
 //Merger S1 with S2 and store the result in S3
 //Return number of values stored in S3
-int merge_seq(const int *S1, int n1, const int *S2, int n2, int *S3, int n3)
-{
-    //ADD CODE
-    return 0;
+int merge_seq(const int *S1, int n1, const int *S2, int n2, int *S3, int n){
+    
+    int count1 = 0;
+    int count2 = 0;
+    int count3 = 0;
+
+    //merge S1 with S2
+    while(count1 < n1 && count2 < n2 && count3 < n){
+        if (S1[count1] < S2[count2]){
+
+            S3[count3++] = S1[count1++];
+            //count3++;
+            //count1++;
+
+        }
+        else if(S1[count1] > S2[count2]){
+            S3[count3++] = S2[count2++];
+        }
+        else{   //S1[count1] == S2[count2]
+            S3[count3++] = S2[count2++];
+            count1++;
+        }
+    }
+
+    while(count1 < n1){
+        S3[count3++] = S2[count2++];
+    }
+
+    while(count2 < n2){
+        S3[count3++] = S2[count2++];
+    }
+
+    return count3;
 }
 
 
