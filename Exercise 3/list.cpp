@@ -91,21 +91,38 @@ ostream& operator<<(ostream& out, const List L)
 
 //Insert n in the end of the list
 void insert_last(List& L, int n){
-    node* p;
+    
+    //list empty
+    if(L == nullptr){   
+        
+        //create new node
+        Node* newNode = new Node;
+        newNode->vaue = n;
 
-    //1. p is pointing to first node
-    //   make p point to last node
-    for ( ; p->next != nullptr; p = p->next){
-        ;
+        newNode = nullptr;
+        L = newNode;
     }
 
-    //2. create new node
-    Node* newNode = new Node;
-    node->value = 20;
+    //list not empty
+    else{               
 
-    //3. link the node to the list
-    newNode->next = p->next;
-    p->next = newNode;
+        node* p;
+
+        //1. p is pointing to first node
+        //   make p point to last node
+        for (p = L; p->next != nullptr; p = p->next){
+            ;
+        }
+
+        //2. create new node
+        Node* newNode = new Node;
+        node->value = 20;
+
+        //3. link the node to the list
+        newNode->next = p->next;
+        p->next = newNode;
+        
+    }
 }
 
 
