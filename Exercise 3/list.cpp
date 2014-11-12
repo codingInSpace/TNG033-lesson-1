@@ -130,7 +130,20 @@ void insert_last(List& L, int n){
 //Insert n in a sorted list L
 //After insertion L should remain sorted
 void insert_sorted(List& L, int n){
-    //ADD CODE
+    //insert as first node of the list
+    if (???){
+        //add code
+    }
+
+    else{
+        Node* p = L;    //list not empty
+
+        //1. find the node after which insertion should occur
+        //add code
+
+        //2.insert new node after node pointed by p
+        //add code
+    }
 }
 
 
