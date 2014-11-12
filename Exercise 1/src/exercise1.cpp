@@ -73,9 +73,16 @@ ostream& operator<<(ostream& out, const Vector &V){
 
 //Read Vector V from stream in
 istream& operator>>(istream& in, Vector &V){
-    for(int i = 0; i < V.cols; i++)
+
+
+
+/*
+    for(int i = 0; i < V.cols; i++){
 		in >> V.p[i];
+
+		if(i == V.cols)
+    }
 	
     return in;
-
+*/
 }
