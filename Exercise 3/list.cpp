@@ -90,17 +90,29 @@ ostream& operator<<(ostream& out, const List L)
 //Lesson 1: exercise 3
 
 //Insert n in the end of the list
-void insert_last(List& L, int n)
-{
-    //ADD CODE
+void insert_last(List& L, int n){
+    node* p;
+
+    //1. p is pointing to first node
+    //   make p point to last node
+    for ( ; p->next != nullptr; p = p->next){
+        ;
+    }
+
+    //2. create new node
+    Node* newNode = new Node;
+    node->value = 20;
+
+    //3. link the node to the list
+    newNode->next = p->next;
+    p->next = newNode;
 }
 
 
 
 //Insert n in a sorted list L
 //After insertion L should remain sorted
-void insert_sorted(List& L, int n)
-{
+void insert_sorted(List& L, int n){
     //ADD CODE
 }
 

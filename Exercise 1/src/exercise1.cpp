@@ -4,21 +4,19 @@
 
 void create_vector(Vector &V, int n){
 
-	//create empty vector
-	if(!n){
-		V.cols = 0;
-		V.p = nullptr;
-		return;
+	V.p = new (nothrow) double[n];
+
+	if(!V.p){
+		cout << "no memory" << endl;
+		V.p = 0;
 	}
+
 	else{
-		V.cols = n;						//set columns
-		V.p = new (nothrow) double [n];	//Allocate memory, return nullptr if unsuccessful
+		V.cols = n;
+		for (int i = 0; i < n; ++i){
+			V.p[i] = 0.0;
+		}
 	}
-
-	if(!V.p)	//if not possible
-		V.cols = 0;
-
-	cout << "Vector created.\n";
 }
 
 //Deallocate space occupied by Vector
@@ -79,4 +77,5 @@ istream& operator>>(istream& in, Vector &V){
 		in >> V.p[i];
 	
     return in;
+
 }

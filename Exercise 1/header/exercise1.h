@@ -19,7 +19,7 @@ struct Vector{
 
 //Create a vector with n columns
 //Allocate an array
-void create_vector(Vector &V, int n = 0);
+void create_vector(Vector &V, int n);
 
 //Deallocate space occupied by vector
 //V = empty vector

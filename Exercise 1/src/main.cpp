@@ -17,6 +17,8 @@ int main(){
 
 	while(true){
 
+		//create_vector(V, cols);		//allocate memory
+
 		cout << "\nNumber of coordinates: ";
 		cin >> cols;
 
@@ -30,8 +32,10 @@ int main(){
 		cout << "\nContinue? (y/n): ";
 		cin >> answer;
 
-		if(answer == 'n')
-			break;			//exit loop
+		if(answer == 'n'){
+			empty_vector(V);	//deallocate memory every iteration
+			break;				//exit loop
+		}
 		
 		empty_vector(V);	//deallocate memory every iteration
 	}
